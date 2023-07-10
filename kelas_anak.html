@@ -1,0 +1,33 @@
+<!-- si kelas anak akan membuat array sebanyak 50 index dengan nilai random -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array dengan Nilai Acak</title>
+    <style>
+      .container {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Array dengan Nilai Acak</h2>
+      <button type="button" onclick="generateRandomArray()">Buat Array</button>
+      <br /><br />
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function generateRandomArray() {
+        var array = [];
+        for (var i = 0; i < 50; i++) {
+          array.push(Math.floor(Math.random() * 100) + 1);
+        }
+
+        var resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = "<p>Array: [" + array.join(", ") + "]</p>";
+      }
+    </script>
+  </body>
+</html>
